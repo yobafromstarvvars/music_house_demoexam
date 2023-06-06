@@ -1,0 +1,422 @@
+// THIS FILE STYLES THE CATALOG PAGE
+
+// A row with categories
+.cat-categories {
+    $cat-categories-border-radius: 10px;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+    .cat-categories-category {
+        height: fit-content;
+        width: fit-content;
+        font-weight: 400;
+        align-items: center;
+        display: inline-flex;
+        border-radius: $cat-categories-border-radius;
+        border: 1px solid $outline-categories-button;
+        background-color: $bg-categories-button;
+        padding: 0.7rem 1rem;
+        margin: 3px 1px;
+        cursor: pointer;
+        text-decoration: none;
+        color: $txt-primary;
+
+        &:hover {
+            background-color: $bg-categories-button-hover;
+            border: 1px solid $outline-categories-button-hover;
+        }
+
+        .category-icon {
+            margin-right: 5px;
+        }
+    }
+}
+
+// Categories in the main page of catalog
+.cat-category-section {
+    margin: 0.5rem;
+    margin-bottom: 4rem;
+    $cat-category-heading-border-radius: 10px;
+
+    .cat-category-heading {
+        width: 100%;
+        height: 70px;
+        border-radius: $cat-category-heading-border-radius;
+        border-top: 5px solid $outline-category;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .cat-category-heading-title {
+            height: 100%;
+            width: 100%;
+            font-size: 40px;
+            font-weight: 700;
+            align-items: center;
+            display: flex;
+            border-radius: $cat-category-heading-border-radius;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-left: 2rem;
+            cursor: pointer;
+            text-decoration: none;
+            color: $txt-primary;
+        }
+    }
+
+    .cat-category-content {
+        $cat-category-subcategory-border-radius: 10px;
+        margin-top: 0.8rem;
+
+        .cat-category-subcategory {
+            display: inline-block;
+            width: fit-content;
+            height: fit-content;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            border-radius: $cat-category-subcategory-border-radius;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            .cat-category-subcategory-title {
+                color: $txt-primary;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: $cat-category-subcategory-border-radius;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: 700;
+                padding: 1.8rem 3rem;
+            }
+        }
+    }
+}
+
+// Subcatalog (e.g. instruments -> guitars)
+.cat-subcat-section {
+    margin: 0.5rem;
+    //margin-bottom:4rem;
+    $cat-category-heading-border-radius: 10px;
+
+    .cat-subcat-heading {
+        width: 100%;
+        height: 70px;
+        border-radius: $cat-category-heading-border-radius;
+        border-top: 5px solid $outline-category;
+        background-image: url("../img/catalog/placeholder.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .cat-subcat-heading-title {
+            height: 100%;
+            width: 100%;
+            font-size: 40px;
+            font-weight: 700;
+            align-items: center;
+            display: flex;
+            border-radius: $cat-category-heading-border-radius;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-left: 2rem;
+            cursor: pointer;
+            text-decoration: none;
+            color: $txt-primary;
+        }
+    }
+    .cat-subcat-content {
+        $cat-category-subcategory-border-radius: 10px;
+        margin-top: 0.8rem;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1rem 5px;
+        padding: 1rem 0;
+        margin: 0 2.5rem 0 0.5rem;
+
+        .cat-subcat-sub {
+            color: $txt-primary-inverse;
+            width: 300px;
+            height: fit-content;
+            display: inline-flex;
+            //white-space: nowrap;
+            //justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            background-color: #fff;
+            border-radius: $cat-category-subcategory-border-radius;
+            text-decoration: none;
+            font-size: inherit;
+            font-weight: 700;
+            padding: 0.5rem 0.6rem;
+            padding-left: 0.4rem;
+
+            .cat-subcat-sub-img {
+                height: 50px;
+                //overflow:hidden;
+                object-fit: contain;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+// Sub sub catalog (e.g. instruments -> guitars -> electro guitars)
+.cat-ss-section {
+    margin: 0.5rem;
+    //margin-bottom:4rem;
+    $cat-category-heading-border-radius: 10px;
+
+    .cat-ss-heading {
+        width: 100%;
+        height: 70px;
+        border-radius: $cat-category-heading-border-radius;
+        border-top: 5px solid $outline-category;
+        background-image: url("../img/catalog/placeholder.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .cat-ss-heading-title {
+            height: 100%;
+            width: 100%;
+            font-size: 40px;
+            font-weight: 700;
+            align-items: center;
+            display: flex;
+            border-radius: $cat-category-heading-border-radius;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-left: 2rem;
+            cursor: pointer;
+            text-decoration: none;
+            color: $txt-primary;
+        }
+    }
+
+    // SUB FILTERS - filters in a subcategory
+    .sub-filters-section {
+        width: fit-content;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 3rem auto 1rem auto;
+
+        .sub-filters {
+            & * {
+                margin-right: 10px;
+            }
+
+            .sub-filters-select {
+                width: 200px;
+                text-overflow: ellipsis;
+                color: $txt-primary;
+                background-color: $bg-filter-button;
+                border: 1px solid $outline-filter-button;
+                border-radius: 10px;
+                padding: 5px 10px;
+                cursor: pointer;
+
+                .sub-filters-select-option {
+                }
+            }
+        }
+        .sub-filters-apply-btn {
+            display: block;
+            width: 80px;
+            color: $txt-primary;
+            background-color: $bg-categories-filters-button;
+            border: 1px solid $outline-filter-button;
+            border-radius: 10px;
+            padding: 5px 10px;
+            margin-top: 8px;
+
+            &:hover {
+                background-color: $bg-categories-filters-button-hover;
+            }
+        }
+    }
+
+    .cat-ss-content {
+        $cat-category-subcategory-border-radius: 10px;
+        margin-top: 0.8rem;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1rem 5px;
+        padding: 1rem 0;
+        margin: 0 2.5rem 0 0.5rem;
+
+        .cat-ss-cats {
+            color: $txt-primary-inverse;
+            width: 300px;
+            height: fit-content;
+            display: inline-flex;
+            //white-space: nowrap;
+            //justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            background-color: #fff;
+            border-radius: $cat-category-subcategory-border-radius;
+            text-decoration: none;
+            font-size: inherit;
+            font-weight: 700;
+            padding: 0.5rem 0.6rem;
+            padding-left: 0.4rem;
+
+            .cat-ss-cats-img {
+                height: 50px;
+                //overflow:hidden;
+                object-fit: contain;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+// PRODUCT-INFO
+#main {
+    height: 100%;
+}
+
+.product-main {
+    height: 100%;
+
+    .product-info {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 2rem;
+        margin-left: 1.8rem;
+
+        .product-text-info {
+            margin-top: 0.8rem;
+
+            .product-info-title {
+            }
+
+            .product-star-rating-link {
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                color: $txt-primary;
+                cursor: pointer;
+                font-size: 16px;
+                line-height: 3px;
+
+                .product-star-rating {
+                    margin-right: 5px;
+
+                    span {
+                        color: $star-full;
+                        font-size: 25px;
+                    }
+                }
+
+                .star-half {
+                    color: $star-half;
+                }
+
+                .no-star {
+                    color: $star-empty !important;
+                }
+            }
+
+            .product-info-specs {
+                margin-top: 1rem;
+
+                li {
+                    font-size: 16px;
+                }
+            }
+            
+            .product-info-description {
+                font-size:1.2rem;
+            }
+        }
+
+        .product-gallery {
+            margin-top: 0.8rem;
+            margin-right: 0.8rem;
+            margin-bottom: 0.8rem;
+            background-color:$bg-loading-cover;
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-position: bottom;
+            border: 1px solid $outline-categories-product-gallery;
+            border-radius: 20px;
+        }
+    }
+    #product-reviews {
+        width:100%;
+        padding-left:2.5rem;
+
+        .product-review-add {
+            display:flex;
+            flex-direction:column;
+            margin: 0 auto;
+            //padding:2rem;
+            padding-bottom:.5rem;
+            border-radius: 10px;
+            width:70%;
+            margin-bottom:2rem;
+
+            .product-review-add-header{
+                background-color: $bg-categories-product-add-review;
+                border-top: 1px solid $outline-categories-add-review;
+                border-left: 1px solid $outline-categories-add-review;
+                border-right: 1px solid $outline-categories-add-review;
+                border-bottom: none;
+                border-radius: 10px 10px 0 0;
+                
+            }
+
+            .product-review-add-main {
+                background-color: $bg-categories-product-add-review;
+                border-bottom: 1px solid $outline-categories-add-review;
+                border-left: 1px solid $outline-categories-add-review;
+                border-right: 1px solid $outline-categories-add-review;
+                border-radius: 0 0 10px 10px;
+            }
+        }
+
+
+        
+
+        .product-reviews-header {
+            display:inline;
+            text-align:center;
+        }
+
+        .product-reviews-line {
+            
+        }
+
+        .product-review {
+            background-color: $bg-categories-product-review;
+            margin: 0 auto;
+            padding:2rem;
+            padding-bottom:.5rem;
+            border-radius: 10px;
+            width:70%;
+
+            .product-star-rating {
+                margin-right: 5px;
+    
+                span {
+                    color: $star-full;
+                    font-size: 15px;
+                }
+            }
+    
+            .star-half {
+                color: $star-half;
+            }
+    
+            .no-star {
+                color: $star-empty !important;
+            }
+        }
+    }
+}
