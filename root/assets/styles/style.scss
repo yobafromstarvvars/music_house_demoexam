@@ -1,0 +1,26 @@
+// config
+@import './colors';
+@import './fonts'; //includes imports of scss files
+@import './overlays';
+
+// elements
+@import './btns'; 
+@import './body'; 
+@import './sidepanel'; 
+@import './footer'; 
+@import './main'; 
+@import './searchbar'; 
+@import './filters'; 
+@import './products';
+@import './catalog';
+@import './path';
+@import './profile';
+@import './about';
+@import './admin';
+
+// home
+@import './slideshow'; 
+@import './carousel'; 
+
+// library
+@import './library0';

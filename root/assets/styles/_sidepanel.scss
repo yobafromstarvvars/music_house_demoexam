@@ -1,0 +1,124 @@
+$sidenav-width: 71px;
+
+#sidenav {
+    height: 100%;
+    width: $sidenav-width;
+    position: fixed;
+    z-index: $side-panel-priority;
+    top: 3.7rem;
+    left: 0;
+    background-color: $bg-side-panel;
+    overflow-x: hidden;
+    //padding-top: 20px;
+    //vertical-align: middle;
+    //justify-content: center;
+    padding: 0 3px;
+    display:flex;
+    flex-direction:column;
+    box-sizing: border-box;
+
+    .sidenav-main {
+        color: $txt-secondary;
+
+        & .active {
+            background-color: $bg-side-panel-button-hover;
+            color: $txt-primary;
+            
+
+            &:hover {
+                background-color: $bg-side-panel-button-active-hover;
+            }
+        }
+
+        & hr {
+            color: $separator-sidenav !important;
+            width:70%;
+            margin: 10px auto;
+        }
+
+        & a {
+            //padding: 8px 8px 8px 1.5rem;
+            text-decoration: none;
+            width: 100%;
+            //font-size: 25px;
+            color: inherit;
+            display: block;
+            align-items: center;
+            text-align: center;
+            font-size: 0.9rem;
+            border-radius: 20%;
+            padding: 15px 0;
+            margin: 1px 0;
+            line-height: 1em;
+
+            &:hover {
+                background-color: $bg-side-panel-button-hover;
+            }
+
+            & span {
+                font-size: 1.5rem;
+                color: inherit;
+            }
+        }
+
+    }
+
+    .sidenav-footer {
+        //padding-left: 1.5rem;
+        position:relative;
+        //height:100%;
+        margin-top:auto;
+        margin-bottom: 3.7rem;
+        padding: 0 .3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:100%;
+        height: 50px;
+
+        & * {
+            color: $txt-disabled;
+        }
+
+        & a {
+            width: 50px;
+            height:100%;
+            //border: 1px solid $outline-button-b;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            text-align: center;
+            justify-content:center;
+            margin-bottom:24px;
+            //padding: 10px 0;
+
+            text-decoration: none;
+            font-size: 0.9rem;
+            //line-height: 1em;
+
+            & span {
+                font-size: 1.9rem;
+                transition: color 150ms;
+            }
+
+            &:hover {
+                & span{
+                    color: $lang-icon-hover;
+                }
+            }
+
+            
+        } 
+    }
+}
+
+/* On smaller screens, where height is less than 450px, 
+change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}

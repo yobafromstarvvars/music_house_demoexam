@@ -1,0 +1,45 @@
+user {
+	id int pk
+	name varchar
+	surname varchar
+	patronymic varchar
+	login varchar
+	email varchar
+	password_hash varchar
+	type enum(`admin`,`customer`)
+    is_admin boolean
+}
+
+order {
+	id int pk
+    time_created timestamp
+    user_id int > user.id
+    status enum(`canceled`,`new`,`confirmed`)
+}
+
+order_product {
+    id int pk
+    order_id int > order.id
+    product_id int > product.id
+    quantity int
+}
+
+category {
+	id int pk
+	title varchar
+}
+
+product {
+    id int pk
+    title varchar
+    price float
+    country varchar
+    year int
+    model varchar
+    image_link varchar
+    in_stock int
+    date_created timestamp
+    category int > category.id
+}
+
+
